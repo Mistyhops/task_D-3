@@ -10,6 +10,7 @@ News
 {% block content %}
     <h1>Новости</h1>
     {% if news %}
+    <h5>Всего новостей: {{ news|length }} </h5>
     {% for specificnews in news %}
     <h3>{{ specificnews.header|censor }}</h3>
     <h5>{{ specificnews.text|truncatechars:50 }}</h5>
